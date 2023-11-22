@@ -1,0 +1,10 @@
+<%= form_tag '/users/login', method: :post, data: { turbo: false } do %>
+    <%= label_tag :username, 'ユーザーの名前：' %>
+    <%= text_field_tag :username %><br>
+    <%= label_tag :password, 'パスワード：' %>
+    <%= password_field_tag :password %><br>
+    <%= submit_tag 'ログイン' %>
+<% end %>
+
+
+<%= link_to "新規登録はこちら", users_new_path%>
