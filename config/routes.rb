@@ -1,7 +1,13 @@
 Rails.application.routes.draw do
+  get 'songs/index'
+  get 'playlists/index'
+  get 'playlists/new'
+  get 'playlists/create'
+  get 'playlists/destroy'
+  get 'playlists/nextsong'
+  get 'top/index'
   get 'users/logout'
   post 'users/login'
-  root "users#index"
   
   get 'users/login'
   get 'users/new'
@@ -13,4 +19,5 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   # root "articles#index"
+  root "top#index"
 end

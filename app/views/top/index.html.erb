@@ -1,0 +1,12 @@
+<h1>プレイリスト</h1>
+
+<div id="playlists">
+    <% @playlists.each do |playlist| %>
+        <p>
+            <strong>
+                <%= playlist.playlistname %>
+            </strong>
+        </p>
+        <%= button_to "このプレイリストを選択" %>
+    <% end %>
+</div>
