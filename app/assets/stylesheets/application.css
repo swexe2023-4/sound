@@ -13,3 +13,26 @@
  *= require_tree .
  *= require_self
  */
+
+#whole_page {
+    font-family: "メイリオ";
+}
+
+#whole_page {
+    padding: 20px;
+}
+
+#title1 {
+    padding-top: 10px;
+    padding-left: 30px;
+}
+
+#playlists {
+    padding-left: 50px;
+    padding-bottom: 50px;
+    padding-top: 5px;
+}
+
+#playlist {
+    padding-bottom: 30px;
+}

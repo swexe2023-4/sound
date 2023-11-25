@@ -1,12 +1,22 @@
-<h1>プレイリスト</h1>
-
-<div id="playlists">
-    <% @playlists.each do |playlist| %>
-        <p>
-            <strong>
-                <%= playlist.playlistname %>
-            </strong>
-        </p>
-        <%= button_to "このプレイリストを選択" %>
-    <% end %>
+<div id="whole_page">
+    <div id="logo">
+        <%= image_tag 'logo2.png' %>
+    </div>
+    
+    <div id="title1">
+        <h1>プレイリスト</h1>
+    </div>
+    
+    <div id="playlists">
+        <% @playlists.each do |playlist| %>
+            <div id="playlist">
+                <p>
+                    <strong>
+                        <%= playlist.playlistname %>
+                    </strong>
+                </p>
+                <%= button_to "このプレイリストを選択" %>
+            </div>
+        <% end %>
+    </div>
 </div>
