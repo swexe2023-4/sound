@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   get 'songs/index'
-  get 'playlists/index'
-  get 'playlists/new'
+  post 'playlists/index'
+  post 'playlists/new'
   get 'playlists/create'
   get 'playlists/destroy'
   get 'playlists/nextsong'

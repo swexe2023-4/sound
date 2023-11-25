@@ -10,13 +10,24 @@
     <div id="playlists">
         <% @playlists.each do |playlist| %>
             <div id="playlist">
-                <p>
-                    <strong>
-                        <%= playlist.playlistname %>
-                    </strong>
-                </p>
-                <%= button_to "このプレイリストを選択" %>
+                <div id="playlist_thumbnail">
+                    <% if playlist.image.attached? %>
+                      <%= image_tag playlist.image %>
+                    <% end %>
+                </div>
+                <div id="playlist_name">
+                    <p>
+                        <strong>
+                            <%= playlist.playlistname %>
+                        </strong>
+                    </p>
+                    <%= button_to "このプレイリストを選択", playlists_index_path, class: "select-playlist" %>
+                </div>
             </div>
         <% end %>
+    </div>
+    
+    <div id="create_playlist_button">
+        <%= button_to "新しくプレイリストを作成", playlists_new_path, class: "create-new-playlist" %>
     </div>
 </div>

@@ -32,8 +32,74 @@
     padding-left: 50px;
     padding-bottom: 50px;
     padding-top: 5px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px; /* プレイリスト間の隙間を調整 */
 }
 
 #playlist {
+    padding: 20px;
     padding-bottom: 30px;
+    background-color: rgba(245, 245, 245, 0.5);
+    border-radius: 10px; /* 丸める半径を設定 */
+    width: 300px;
+    max-width: 100%; /* 要素が親要素を超えないようにする */
+    box-sizing: border-box; /* 各プレイリスト内で padding が要素の幅や高さを影響するようにする */
+}
+
+#playlist_thumbnail {
+    float: left;
+    width: 30%;
+    box-sizing: border-box;
+}
+
+#playlist_thumbnail img{
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
+}
+
+#playlist_name {
+    margin-left: 40%;    /* #playlist_thumbnail の幅と同じに設定 */
+    box-sizing: border-box;
+}
+#playlist_name p {
+    /*padding-top: 10px;*/
+}
+
+#create_playlist_button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* ビューポートの高さいっぱいにボタンを配置 */
+}
+
+/* カスタマイズされたボタンのスタイル */
+.select-playlist {
+    background-color: #a9a9a9;
+    color: #ffffff;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 10px;
+    text-decoration: none; /* テキストの下線を削除 */
+}
+.select-playlist:hover {
+    background-color: #808080;
+}
+
+.create-new-playlist {
+    background-color: #a9a9a9;
+    color: #ffffff;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 20px;
+    text-decoration: none; /* テキストの下線を削除 */
+}
+.create-new-playlist:hover {
+    background-color: #808080;
 }
