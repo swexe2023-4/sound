@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   get 'playlists/create'
   get 'playlists/destroy'
   get 'playlists/nextsong'
+  get 'playlists/show'
   get 'top/index'
   get 'users/logout'
   post 'users/login'
@@ -15,9 +16,11 @@ Rails.application.routes.draw do
   post 'users/login'
   
   resources :users
+  resources :playlists
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   # Defines the root path route ("/")
   # root "articles#index"
-  root "top#index"
+  # root "top#index"
+  root "playlists#new"
 end

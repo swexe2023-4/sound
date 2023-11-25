@@ -1,0 +1,6 @@
+#サムネの表示
+<% if @playlist.image.attached? %>
+  <%= image_tag @playlist.image %>
+<% end %>
+
+<%= button_to "トップへ戻る", top_index_path, method: :get %>
