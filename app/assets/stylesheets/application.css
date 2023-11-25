@@ -23,8 +23,10 @@
 }
 
 #title1 {
+    font-family: 'Yu Gothic', 'メイリオ', sans-serif;
     padding-top: 10px;
     padding-left: 30px;
+    font-size: 30px;
     /*background-image: url("/images/logo2.png");*/
 }
 

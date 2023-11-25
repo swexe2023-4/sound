@@ -1,7 +1,9 @@
-<h1>新しくプレイリストを作成</h1>
-
-<%= form_with model: @playlist, local: true  do |form| %>
-  <%= form.text_area :playlistname %><br>
-  <%= form.file_field :image %><br>
-  <%= form.submit %>
-<% end %>
+<div id="whole_page">
+  <h1>新規プレイリスト作成</h1>
+  
+  <%= form_with model: @playlist, local: true  do |form| %>
+    <%= form.text_area :playlistname %><br>
+    <%= form.file_field :image %><br>
+    <%= form.submit %>
+  <% end %>
+</div>
