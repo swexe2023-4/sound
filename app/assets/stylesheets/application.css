@@ -22,12 +22,25 @@
     padding: 20px;
 }
 
+.font {
+    font-family: 'Yu Gothic', 'メイリオ', sans-serif;
+}
+
 #title1 {
     font-family: 'Yu Gothic', 'メイリオ', sans-serif;
     padding-top: 10px;
-    padding-left: 30px;
+    padding-left: 50px;
     font-size: 30px;
+    font-weight: bold;
     /*background-image: url("/images/logo2.png");*/
+}
+
+#title2 {
+    font-family: 'Yu Gothic', 'メイリオ', sans-serif;
+    padding-top: 10px;
+    padding-left: 50px;
+    font-size: 30px;
+    font-weight: bold;
 }
 
 #playlists {
@@ -65,9 +78,8 @@
 #playlist_name {
     margin-left: 40%;    /* #playlist_thumbnail の幅と同じに設定 */
     box-sizing: border-box;
-}
-#playlist_name p {
-    /*padding-top: 10px;*/
+    font-family: 'Yu Gothic', 'メイリオ', sans-serif;
+    font-weight: 600;
 }
 
 #create_playlist_button {
@@ -104,4 +116,58 @@
 }
 .create-new-playlist:hover {
     background-color: #808080;
+}
+
+/*new.html.erb*/
+.playlist-form {
+  max-width: 400px;
+  /*margin: 0 auto;*/
+  padding: 20px;
+  background-color: rgba(245, 245, 245, 0.5);
+  /*color: #ffffff;*/
+  /*border: 1px solid #ccc;*/
+  border-radius: 5px;
+}
+
+.form-control {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  box-sizing: border-box;
+}
+
+.btn {
+  background-color: #4caf50;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: #45a049;
+}
+
+.new_form {
+    padding: 50px;
+    padding-top: 30px;
+}
+
+.playlistname {
+    font-family: 'Yu Gothic', 'メイリオ', sans-serif;
+    padding-bottom: 10px;
+}
+.playlistname_text {
+    padding-bottom: 20px;
+}
+.upload_image_sign {
+    font-family: 'Yu Gothic', 'メイリオ', sans-serif;
+    padding-bottom: 10px;
+}
+.upload_image {
+    padding-bottom: 20px;
+}
+.submit_btn {
+    text-align: center;
 }
