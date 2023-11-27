@@ -54,8 +54,8 @@
 }
 
 #playlist {
-    padding: 20px;
-    padding-bottom: 30px;
+    padding: 10px;
+    /*padding-bottom: 30px;*/
     background-color: rgba(245, 245, 245, 0.5);
     border-radius: 10px; /* 丸める半径を設定 */
     width: 300px;
@@ -65,22 +65,31 @@
 
 #playlist_thumbnail {
     float: left;
-    width: 30%;
+    width: 35%;
     box-sizing: border-box;
 }
 
 #playlist_thumbnail img{
+    border-radius: 10px;
     max-width: 100%;
     max-height: 100%;
     width: auto;
     height: auto;
 }
 
+#playlist_name_area {
+    text-align: center;
+    display: flex;    /*flex boxの使用*/
+    align-items: center; /* 縦方向の中央揃え */
+    justify-content: center; /* 横方向の中央揃え */
+    height: 100%; /* 親要素の高さを100%にすることで、子要素を中央に配置 */
+}
+
 #playlist_name {
-    margin-left: 40%;    /* #playlist_thumbnail の幅と同じに設定 */
     box-sizing: border-box;
     font-family: 'Yu Gothic', 'メイリオ', sans-serif;
     font-weight: 600;
+    font-size: 20px;
 }
 
 #create_playlist_button {
@@ -233,6 +242,7 @@
 }
 
 #playlist_thumbnail_s img{
+    border-radius: 10px;
     max-width: 100%;
     max-height: 100%;
     width: auto;

@@ -15,11 +15,13 @@
                       <%= image_tag playlist.image %>
                     <% end %>
                 </div>
-                <div id="playlist_name">
-                    <p>
-                        <%= playlist.playlistname %>
-                    </p>
-                    <%= button_to "このプレイリストを選択", playlists_index_path, class: "select-playlist" %>
+                <div id="playlist_name_area">
+                    <div id="playlist_name">
+                        <p>
+                            <%= playlist.playlistname %>
+                        </p>
+                        <%= button_to "このプレイリストを選択", playlists_index_path, class: "select-playlist" %>
+                    </div>
                 </div>
             </div>
         <% end %>
