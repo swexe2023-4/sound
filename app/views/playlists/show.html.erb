@@ -1,6 +1,28 @@
-<h1>新規作成されました</h1>
-<% if @playlist.image.attached? %>
-  <%= image_tag @playlist.image %>
-<% end %>
-
-<%= button_to "トップへ戻る", top_index_path, method: :get %>
+<div id="whole_page">
+    <div id="logo">
+        <%= image_tag 'logo2.png' %>
+    </div>
+    <div id="title2">
+        <p>新規作成しました</p>
+    </div>
+    <div id="playlists_s">
+        <% if @playlist.image.attached? %>
+            <div id="playlist_s">
+                <div id="playlist_thumbnail_s">
+                    <%= image_tag @playlist.image %>
+                </div>
+                <div id="playlist_name_area">
+                    <div id="playlist_name_s">
+                        <p><%= @playlist.playlistname %></p>
+                    </div>
+                </div>
+            </div>
+        <% end %>
+    </div>
+    
+    <div id="rtp_area">
+        <div id="rtp">
+            <%= button_to "トップへ戻る", top_index_path, {method: :get, class: "rtp_button"} %>
+        </div>
+    </div>
+</div>

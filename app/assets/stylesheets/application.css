@@ -24,6 +24,7 @@
 
 .font {
     font-family: 'Yu Gothic', 'メイリオ', sans-serif;
+    font-weight: 600;
 }
 
 #title1 {
@@ -86,7 +87,9 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh; /* ビューポートの高さいっぱいにボタンを配置 */
+    padding: 20px;
+    /*height: 100vh;*/
+    /* ビューポートの高さいっぱいにボタンを配置 */
 }
 
 /* カスタマイズされたボタンのスタイル */
@@ -126,27 +129,37 @@
   background-color: rgba(245, 245, 245, 0.5);
   /*color: #ffffff;*/
   /*border: 1px solid #ccc;*/
-  border-radius: 5px;
+  border-radius: 10px;
 }
 
-.form-control {
+.pln_form {
   width: 100%;
   padding: 8px;
   margin-bottom: 10px;
   box-sizing: border-box;
+  resize:none;
+  border: 2px solid #cccccc;
+  border-radius: 6px;
+}
+#centered_text_area {
+  text-align: center; /* テキストを中央に配置 */
 }
 
-.btn {
-  background-color: #4caf50;
-  color: white;
-  padding: 10px 15px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
+#centered_text_area textarea {
+  width: 100%; /* テキストエリアをフル幅に広げる */
 }
 
-.btn:hover {
-  background-color: #45a049;
+.sbt_button {
+    background-color: #a9a9a9; /* ボタンの背景色 */
+    color: white; /* ボタンの文字色 */
+    padding: 10px 15px; /* ボタンのパディング */
+    border: none; /* ボーダーをなくす */
+    border-radius: 5px; /* ボタンの角を丸くする */
+    cursor: pointer;
+    font-size: 16px; /* ボタンの文字サイズ */
+}
+.sbt_button:hover {
+    background-color: #808080;
 }
 
 .new_form {
@@ -159,15 +172,101 @@
     padding-bottom: 10px;
 }
 .playlistname_text {
+    padding-top: 10px;
     padding-bottom: 20px;
 }
 .upload_image_sign {
     font-family: 'Yu Gothic', 'メイリオ', sans-serif;
     padding-bottom: 10px;
+    padding-top: 10px;
 }
+
 .upload_image {
+    padding-top: 10px;
     padding-bottom: 20px;
-}
-.submit_btn {
     text-align: center;
+}
+.upi_button {
+    background-color: #cccccc;
+    /* ボタンの背景色 */
+    color: white; /* ボタンの文字色 */
+    padding: 10px 15px; /* ボタンのパディング */
+    border: none; /* ボーダーをなくす */
+    border-radius: 5px; /* ボタンの角を丸くする */
+    cursor: pointer;
+    font-size: 16px; /* ボタンの文字サイズ */
+}
+.upi_button:hover {
+    background-color: #808080;
+}
+
+.submit_btn {
+    padding-top: 70px;
+    padding-bottom: 20px;
+    text-align: center;
+}
+
+
+/*show.html.erb*/
+#playlists_s {
+    padding-left: 50px;
+    padding-bottom: 50px;
+    padding-top: 5px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px; /* プレイリスト間の隙間を調整 */
+}
+
+#playlist_s {
+    padding: 20px;
+    background-color: rgba(245, 245, 245, 0.5);
+    border-radius: 10px; /* 丸める半径を設定 */
+    width: 800px;
+    max-width: 100%; /* 要素が親要素を超えないようにする */
+    box-sizing: border-box; /* 各プレイリスト内で padding が要素の幅や高さを影響するようにする */
+}
+
+#playlist_thumbnail_s {
+    float: left;
+    width: 30%;
+    box-sizing: border-box;
+}
+
+#playlist_thumbnail_s img{
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
+}
+
+#playlist_name_area {
+    text-align: center;
+    display: flex;    /*flex boxの使用*/
+    align-items: center; /* 縦方向の中央揃え */
+    justify-content: center; /* 横方向の中央揃え */
+    height: 100%; /* 親要素の高さを100%にすることで、子要素を中央に配置 */
+}
+
+#playlist_name_s {
+    margin-left: 10%;    /* #playlist_thumbnail の幅と同じに設定 */
+    box-sizing: border-box;
+    font-family: 'Yu Gothic', 'メイリオ', sans-serif;
+    font-weight: 600;
+    font-size: 40px;
+}
+
+#rtp_area {
+    padding-left: 400px;
+}
+.rtp_button {
+    background-color: #a9a9a9; /* ボタンの背景色 */
+    color: white; /* ボタンの文字色 */
+    padding: 10px 15px; /* ボタンのパディング */
+    border: none; /* ボーダーをなくす */
+    border-radius: 5px; /* ボタンの角を丸くする */
+    cursor: pointer;
+    font-size: 16px; /* ボタンの文字サイズ */
+}
+.rtp_button:hover {
+    background-color: #808080;
 }
