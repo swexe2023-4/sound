@@ -5,7 +5,7 @@
     
     <div id="playlist_area_pi">
         <% if @selected_playlist.image.attached? %>
-            <div id="playlist_pi">
+            <div id="playlist_top_pi">
                 <div id="playlist_thumbnail_pi">
                     <%= image_tag @selected_playlist.image %>
                 </div>
@@ -18,6 +18,9 @@
             
             <div id="playlist_songs_pi">
                 <div id="playlist_song_pi">
+                    <%= button_to "曲名1", songs_index_path, method: 'post', class: "select-song" %>
+                    <%= button_to "曲名2", songs_index_path, method: 'post', class: "select-song" %>
+                    <%= button_to "曲名3", songs_index_path, method: 'post', class: "select-song" %>
                     <%= button_to "曲名1", songs_index_path, method: 'post', class: "select-song" %>
                     <%= button_to "曲名2", songs_index_path, method: 'post', class: "select-song" %>
                     <%= button_to "曲名3", songs_index_path, method: 'post', class: "select-song" %>
