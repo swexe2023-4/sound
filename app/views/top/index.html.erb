@@ -20,7 +20,7 @@
                         <p>
                             <%= playlist.playlistname %>
                         </p>
-                        <%= button_to "このプレイリストを選択", playlists_index_path, class: "select-playlist" %>
+                        <%= button_to "このプレイリストを選択", playlists_index_path(id: playlist.id), method: 'post', class: "select-playlist" %>
                     </div>
                 </div>
             </div>
@@ -29,5 +29,33 @@
     
     <div id="create_playlist_button">
         <%= button_to "新しくプレイリストを作成", playlists_new_path, class: "create-new-playlist" %>
+    </div>
+    
+    <div id="title1">
+        <p>全ての曲</p>
+    </div>
+    
+    <div id="songs">
+        <% @playlists.each do |playlist| %>
+            <div id="song">
+                <!--<div id="playlist_thumbnail">-->
+                <!--    <% if playlist.image.attached? %>-->
+                <!--      <%= image_tag playlist.image %>-->
+                <!--    <% end %>-->
+                <!--</div>-->
+                <div id="song_name_area">
+                    <div id="song_name">
+                        <p>
+                            <%= playlist.playlistname %>
+                        </p>
+                        <%= button_to playlist.playlistname, playlists_index_path(id: playlist.id), method: 'post', class: "select-playlist" %>
+                    </div>
+                </div>
+            </div>
+        <% end %>
+    </div>
+    
+    <div id="create_song_button">
+        <%= button_to "新しく曲をアップロード", playlists_new_path, class: "create-new-song" %>
     </div>
 </div>

@@ -1,5 +1,11 @@
 class PlaylistsController < ApplicationController
   def index
+    @playlists = Playlist.all
+    
+    if params[:id].present?
+      @selected_playlist = @playlists.find(params[:id])
+    end
+    render "index"
   end
 
   def new
@@ -22,6 +28,6 @@ class PlaylistsController < ApplicationController
   end
   
   def playlist_params
-    params.require(:playlist).permit(:playlistname, :user_id, :image)
+    params.require(:playlist).permit(:id, :playlistname, :user_id, :image)
   end
 end
