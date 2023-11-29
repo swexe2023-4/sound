@@ -32,10 +32,13 @@ Rails.application.routes.draw do
   get 'users/complete'
 
   post 'users/make', to: 'users#make'
+  post 'users/login'
+  post 'songs/index'
   
   resources :users
   
   resources :playlists
+  resources :songs
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   # Defines the root path route ("/")

@@ -101,6 +101,15 @@
     /* ビューポートの高さいっぱいにボタンを配置 */
 }
 
+#songs {
+    padding-left: 50px;
+    padding-bottom: 50px;
+    padding-top: 5px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px; /* プレイリスト間の隙間を調整 */
+}
+
 /* カスタマイズされたボタンのスタイル */
 .select-playlist {
     background-color: #a9a9a9;

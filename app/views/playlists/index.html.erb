@@ -1,2 +1,13 @@
-<h1>Playlists#index</h1>
-<p>Find me in app/views/playlists/index.html.erb</p>
+<div id="whole_page">
+    <div id="logo">
+        <%= image_tag 'logo2.png' %>
+    </div>
+    
+    <%= @selected_playlist.playlistname %><br>
+    
+    <%= button_to "曲名1", songs_index_path %><br>
+    曲名2<br>
+    曲名3<br>
+    
+</div>
+
