@@ -112,7 +112,9 @@
 
 /* カスタマイズされたボタンのスタイル */
 .select-playlist {
-    background-color: #a9a9a9;
+    font-family: 'Yu Gothic', 'メイリオ', sans-serif;
+    font-weight: 600;
+    background-color: rgba(211, 211, 211, 1);
     color: #ffffff;
     padding: 5px 10px;
     border: none;
@@ -122,11 +124,13 @@
     text-decoration: none; /* テキストの下線を削除 */
 }
 .select-playlist:hover {
-    background-color: #808080;
+    background-color: rgba(211, 211, 211, 0.5);
 }
 
 .create-new-playlist {
-    background-color: #a9a9a9;
+    font-family: 'Yu Gothic', 'メイリオ', sans-serif;
+    font-weight: 600;
+    background-color: rgba(211, 211, 211, 1);
     color: #ffffff;
     padding: 5px 10px;
     border: none;
@@ -136,7 +140,7 @@
     text-decoration: none; /* テキストの下線を削除 */
 }
 .create-new-playlist:hover {
-    background-color: #808080;
+    background-color: rgba(211, 211, 211, 0.5);
 }
 
 /*new.html.erb*/
@@ -168,7 +172,9 @@
 }
 
 .sbt_button {
-    background-color: #a9a9a9; /* ボタンの背景色 */
+    font-family: 'Yu Gothic', 'メイリオ', sans-serif;
+    font-weight: 600;
+    background-color: rgba(211, 211, 211, 1);
     color: white; /* ボタンの文字色 */
     padding: 10px 15px; /* ボタンのパディング */
     border: none; /* ボーダーをなくす */
@@ -177,7 +183,7 @@
     font-size: 16px; /* ボタンの文字サイズ */
 }
 .sbt_button:hover {
-    background-color: #808080;
+    background-color: rgba(211, 211, 211, 0.5);
 }
 
 .new_form {
@@ -205,7 +211,9 @@
     text-align: center;
 }
 .upi_button {
-    background-color: #cccccc;
+    font-family: 'Yu Gothic', 'メイリオ', sans-serif;
+    font-weight: 600;
+    background-color: rgba(211, 211, 211, 1);
     /* ボタンの背景色 */
     color: white; /* ボタンの文字色 */
     padding: 10px 15px; /* ボタンのパディング */
@@ -215,10 +223,12 @@
     font-size: 16px; /* ボタンの文字サイズ */
 }
 .upi_button:hover {
-    background-color: #808080;
+    background-color: rgba(211, 211, 211, 0.5);
 }
 
 .submit_btn {
+    font-family: 'Yu Gothic', 'メイリオ', sans-serif;
+    font-weight: 600;
     padding-top: 70px;
     padding-bottom: 20px;
     text-align: center;
@@ -278,7 +288,9 @@
     padding-left: 400px;
 }
 .rtp_button {
-    background-color: #a9a9a9; /* ボタンの背景色 */
+    font-family: 'Yu Gothic', 'メイリオ', sans-serif;
+    font-weight: 600;
+    background-color: rgba(211, 211, 211, 1);
     color: white; /* ボタンの文字色 */
     padding: 10px 15px; /* ボタンのパディング */
     border: none; /* ボーダーをなくす */
@@ -287,7 +299,7 @@
     font-size: 16px; /* ボタンの文字サイズ */
 }
 .rtp_button:hover {
-    background-color: #808080;
+    background-color: rgba(211, 211, 211, 0.5);
 }
 
 
