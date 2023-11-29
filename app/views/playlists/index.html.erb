@@ -3,11 +3,27 @@
         <%= image_tag 'logo2.png' %>
     </div>
     
-    <%= @selected_playlist.playlistname %><br>
-    
-    <%= button_to "曲名1", songs_index_path %><br>
-    曲名2<br>
-    曲名3<br>
-    
+    <div id="playlist_area_pi">
+        <% if @selected_playlist.image.attached? %>
+            <div id="playlist_pi">
+                <div id="playlist_thumbnail_pi">
+                    <%= image_tag @selected_playlist.image %>
+                </div>
+                <div id="playlist_name_area_pi">
+                    <div id="playlist_name_pi">
+                        <p><%= @selected_playlist.playlistname %></p>
+                    </div>
+                </div>
+            </div>
+            
+            <div id="playlist_songs_pi">
+                <div id="playlist_song_pi">
+                    <%= button_to "曲名1", songs_index_path, method: 'post', class: "select-song" %>
+                    <%= button_to "曲名2", songs_index_path, method: 'post', class: "select-song" %>
+                    <%= button_to "曲名3", songs_index_path, method: 'post', class: "select-song" %>
+                </div>
+            </div>
+        <% end %>
+    </div>
 </div>
 

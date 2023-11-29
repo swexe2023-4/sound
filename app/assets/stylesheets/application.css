@@ -289,3 +289,89 @@
 .rtp_button:hover {
     background-color: #808080;
 }
+
+
+/*playlists/index.html.erb*/
+#playlist_area_pi {
+    background-color: rgba(245, 245, 245, 0.5);
+    padding: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    border-radius: 30px; /* 丸める半径を設定 */
+}
+
+#playlist_pi {
+    padding: 50px;
+    background-color: rgba(245, 245, 245, 1);
+    border-radius: 30px; /* 丸める半径を設定 */
+    width: 100%;
+    max-width: 100%; /* 要素が親要素を超えないようにする */
+    box-sizing: border-box; /* 各プレイリスト内で padding が要素の幅や高さを影響するようにする */
+}
+
+#playlist_thumbnail_pi {
+    padding-left: 50px;
+    float: left;
+    width: 30%;
+    box-sizing: border-box;
+}
+
+#playlist_thumbnail_pi img{
+    border-radius: 10px;
+    max-width: 100%;
+    max-height: 100%;
+    /*width: auto;*/
+    height: auto;
+}
+
+#playlist_name_area_pi {
+    text-align: center;
+    display: flex;    /*flex boxの使用*/
+    align-items: center; /* 縦方向の中央揃え */
+    justify-content: center; /* 横方向の中央揃え */
+    height: 100%; /* 親要素の高さを100%にすることで、子要素を中央に配置 */
+}
+
+#playlist_name_pi {
+    /*margin-left: 10%;*/    /* #playlist_thumbnail の幅と同じに設定 */
+    box-sizing: border-box;
+    font-family: 'Yu Gothic', 'メイリオ', sans-serif;
+    font-weight: 600;
+    font-size: 100px;
+}
+
+#playlist_songs_pi {
+    /*padding-left: 100px;*/
+    padding-top: 90px;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%
+}
+
+#playlist_song_pi {
+    /*padding-bottom: 30px;*/
+    background-color: rgba(245, 245, 245, 0.5);
+    border-radius: 10px; /* 丸める半径を設定 */
+    width: 100%;
+    max-width: 100%; /* 要素が親要素を超えないようにする */
+    box-sizing: border-box; /* 各プレイリスト内で padding が要素の幅や高さを影響するようにする */
+    text-align: center
+}
+
+.select-song {
+    font-family: 'Yu Gothic', 'メイリオ', sans-serif;
+    font-weight: 600;
+    background-color: rgba(211, 211, 211, 1);
+    color: #ffffff;
+    padding: 5px 10px;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 35px;
+    text-decoration: none; /* テキストの下線を削除 */
+    width: 80%
+}
+.select-song:hover {
+    background-color: rgba(211, 211, 211, 0.5);
+}
