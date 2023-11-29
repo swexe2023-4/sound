@@ -14,7 +14,8 @@ class UsersController < ApplicationController
     
     if user && BCrypt::Password.new(user.password) == params[:password]
       session[:login_username] = params[:username]
-      redirect_to users_complete_path
+      redirect_to top_index_path
+      
     #else
       #render "error"
     end
@@ -29,7 +30,7 @@ class UsersController < ApplicationController
     user = User.new(username: params[:username], password: make_pass)
     user.save
     session[:login_username] = params[:username]
-    redirect_to users_complete_path
+    redirect_to users_login_path
   end
 
   def complete
