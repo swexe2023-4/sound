@@ -55,6 +55,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_11_25_055301) do
 
   create_table "songs", force: :cascade do |t|
     t.string "songname"
+    t.string "singername"
     t.string "songurl"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
