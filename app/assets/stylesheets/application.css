@@ -148,7 +148,7 @@
     max-width: 100%; /* 要素が親要素を超えないようにする */
     box-sizing: border-box; /* 各プレイリスト内で padding が要素の幅や高さを影響するようにする */
 }
-.select-song-wrapper {
+.select_song_wrapper {
   position: absolute;
   top: 0;
   left: 0;
@@ -159,7 +159,7 @@
   /* カーソルをポインターに変更 */
   /*cursor: pointer;*/
 }
-.select-song {
+.select_song {
     background-color: transparent;
     width: 100%; /* 親要素いっぱいに広げる */
     height: 55px;
@@ -169,7 +169,7 @@
     text-decoration: none; /* テキストの下線を削除 */
     cursor: pointer;
 }
-.select-song:hover {
+.select_song:hover {
     background-color: rgba(211, 211, 211, 0.5);
 }
 
@@ -461,4 +461,22 @@
     max-width: 100%; /* 要素が親要素を超えないようにする */
     box-sizing: border-box; /* 各プレイリスト内で padding が要素の幅や高さを影響するようにする */
     text-align: center
+}
+
+.select-song {
+    font-family: 'Yu Gothic', 'メイリオ', sans-serif;
+    font-weight: 600;
+    background-color: rgba(211, 211, 211, 1);
+    color: #ffffff;
+    padding: 5px 10px;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 35px;
+    text-decoration: none; /* テキストの下線を削除 */
+    width: 90%
+}
+.select-song:hover {
+    background-color: rgba(211, 211, 211, 0.5);
 }

@@ -47,8 +47,8 @@
     <div id="songs">
         <% @songs.each do |song| %>
             <div class="song" data-id="<%= song.id %>">
-                <div class="select-song-wrapper">
-                    <%= button_to "", songs_index_path(id: song.id), method: 'post', class: "select-song" %>
+                <div class="select_song_wrapper">
+                    <%= button_to "", songs_index_path(id: song.id), method: 'post', class: "select_song" %>
                 </div>
                 <div id="song_name_area">
                     <div id="song_name">
