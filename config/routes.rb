@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   # root "users#index"
   # post 'users/login'
   get 'songs/index'
+  get 'songs/new'
   post 'playlists/index'
   post 'playlists/new'
   get 'playlists/create'
