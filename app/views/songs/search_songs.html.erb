@@ -5,20 +5,20 @@
         <% end %>
     </div>
     
-    <%= @songname1 %>
-    <%= @artistname1 %><br>
-    
-    <%= @songname2 %>
-    <%= @artistname2 %><br>
-    
-    <%= @songname3 %>
-    <%= @artistname3 %><br>
-    
-    <%= @songname4 %>
-    <%= @artistname4 %><br>
-    
-    <%= @songname5 %>
-    <%= @artistname5 %><br>
-    
-    <%= @tracks %>
+    <div class="songs_search">
+        <% @track_list.each do |track| %>
+            <div class="thumbnail_search">
+                <%= image_tag track.album.images.first["url"] %>
+            </div>
+            <div class="songname_search">
+                <%= track.name %>
+            </div>
+            <div class="artistname_search">
+                <%= track.artists[0].name %>
+            </div>
+            <div class="play_button_area">
+                <%= button_to "再生する", songs_index_path(uri: track.uri), class: "play_button" %>
+            </div>
+        <% end %>
+    </div>
 </div>

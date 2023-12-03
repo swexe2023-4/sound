@@ -1,23 +1,12 @@
-<h1>Songs#index</h1>
-<p>Find me in app/views/songs/index.html.erb</p>
-
-<!--<%= @selected_song.songname %>-->
-
-<!--<%= @tracks %>-->
-<!--<%= @track %>-->
-
-<!--<img src="<%= @track.album.images.first["url"] %>" width="300" height="300" class="block">-->
-<!--<h3 class="text-light"><%= @track.artists[0].name %></h3>-->
-<!--<iframe class="iframe-song" src="https://open.spotify.com/track/5HCyWlXZPP0y6Gqq8TgA20">-->
-
-<div id="embed-iframe"></div>
-<script>
-    window.onSpotifyIframeApiReady = (IFrameAPI) => {
-      const element = document.getElementById('embed-iframe');
-      const options = {
-          uri: 'spotify:track:<%= @track_id %>'
-        };
-      const callback = (EmbedController) => {};
-      IFrameAPI.createController(element, options, callback);
-    };
-</script>
+<div id="embed-iframe">
+  <script>
+      window.onSpotifyIframeApiReady = (IFrameAPI) => {
+        const element = document.getElementById('embed-iframe');
+        const options = {
+            uri: 'spotify:track:<%= @track_id %>'
+          };
+        const callback = (EmbedController) => {};
+        IFrameAPI.createController(element, options, callback);
+      };
+  </script>
+</div>

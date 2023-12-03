@@ -44,42 +44,11 @@
         <!--</div>-->
     </div>
     
-    <!--<div id="songs">-->
-    <!--    <% @songs.each do |song| %>-->
-    <!--        <div class="song" data-id="<%= song.id %>">-->
-    <!--            <div class="select_song_wrapper">-->
-    <!--                <%= button_to "", songs_index_path(id: song.id), method: 'post', class: "select_song" %>-->
-    <!--            </div>-->
-    <!--            <div id="song_name_area">-->
-    <!--                <div id="song_name">-->
-    <!--                    <%= song.songname %>-->
-    <!--                </div>-->
-    <!--            </div>-->
-    <!--        </div>-->
-    <!--    <% end %>-->
-    <!--</div>-->
-    
     <div class="menu">
         <div class="search_by_songname">
             <%= form_with(url: songs_search_songs_path, method: :post) do |form| %>
-                <div class="search_songname">
-                    <%= form.label :songname, "曲名で探す", class: 'font' %><br>
-                </div>
                 <div class="search_songname_text">
                     <%= form.text_area :songname, class: 'pln_form', rows: 1, id: "centered_text_area" %><br>
-                </div>
-                <div class="submit_btn">
-                    <%= form.submit "Search", class: 'sbt_button' %>
-                </div>
-            <% end %>
-        </div>
-        <div class="search_by_artistname">
-            <%= form_with(url: songs_search_songs_path, method: :post) do |form| %>
-                <div class="search_artistname">
-                    <%= form.label :artistname, "アーティスト名で探す", class: 'font' %><br>
-                </div>
-                <div class="search_artistname_text">
-                    <%= form.text_area :artistname, class: 'pln_form', rows: 1, id: "centered_text_area" %><br>
                 </div>
                 <div class="submit_btn">
                     <%= form.submit "Search", class: 'sbt_button' %>
