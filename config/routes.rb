@@ -35,6 +35,7 @@ Rails.application.routes.draw do
   post 'users/make', to: 'users#make'
   post 'users/login'
   post 'songs/index'
+  post 'songs/search_songs'
   
   resources :users
   
