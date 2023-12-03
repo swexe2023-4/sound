@@ -1,7 +1,7 @@
 <h1>Songs#index</h1>
 <p>Find me in app/views/songs/index.html.erb</p>
 
-<%= @selected_song.songname %>
+<!--<%= @selected_song.songname %>-->
 
 <!--<%= @tracks %>-->
 <!--<%= @track %>-->
@@ -15,7 +15,7 @@
     window.onSpotifyIframeApiReady = (IFrameAPI) => {
       const element = document.getElementById('embed-iframe');
       const options = {
-          uri: 'spotify:track:5HCyWlXZPP0y6Gqq8TgA20'
+          uri: 'spotify:track:<%= @track_id %>'
         };
       const callback = (EmbedController) => {};
       IFrameAPI.createController(element, options, callback);
