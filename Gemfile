@@ -71,3 +71,9 @@ group :test do
   gem "selenium-webdriver"
 
 end
+
+gem 'google-api-client', '~> 0.11'
+
+gem 'rspotify'
+gem 'dotenv-rails'
+
