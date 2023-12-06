@@ -18,6 +18,7 @@
             </div>
             <div class="play_button_area">
                 <%= button_to "再生する", songs_index_path(uri: track.uri), class: "play_button" %>
+                <%= button_to "プレイリストに追加する", playlists_add_path(uri: track.uri), class: "play_button" %>
             </div>
         <% end %>
     </div>

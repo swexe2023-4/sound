@@ -24,8 +24,9 @@ Rails.application.routes.draw do
   
   # resources :users
   
-  root "users#logout"  
+  root "users#logout"
   
+  post 'playlists/add'
   post 'users/login'
   get 'users/login'
   get 'users/logout'
