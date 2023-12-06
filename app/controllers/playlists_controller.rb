@@ -31,6 +31,17 @@ class PlaylistsController < ApplicationController
     params.require(:playlist).permit(:id, :playlistname, :user_id, :image)
   end
   
+  def add_select
+  end
+  
   def add
+    #render "add"
+    uri = params[:uri]
+
+    # 正規表現を使ってIDを抽出
+    @track_id = uri.match(/spotify:track:(\w+)/)&.captures&.first
+    
+    @playlistsong = PlaylistSong.create(playlist_id: params[:playlistid], song_id: @track_id)
+    redirect_to top_index_path
   end
 end

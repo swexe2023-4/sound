@@ -26,6 +26,7 @@ Rails.application.routes.draw do
   
   root "users#logout"
   
+  post 'playlists/add_select'
   post 'playlists/add'
   post 'users/login'
   get 'users/login'

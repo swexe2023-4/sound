@@ -14,6 +14,7 @@ class UsersController < ApplicationController
     
     if user && BCrypt::Password.new(user.password) == params[:password]
       session[:login_username] = params[:username]
+      session[:id] = params[:id]
       redirect_to top_index_path
       
     #else

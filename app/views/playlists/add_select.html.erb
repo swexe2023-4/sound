@@ -1,0 +1,17 @@
+<h1>addページ</h1>
+
+
+<h1>曲の追加を行います</h1>
+
+
+<h3>どのプレイリストに入れますか？</h3>
+
+<div class="playlist_list">
+    <h2>作成済みプレイリスト一覧</h2>
+    <ul>
+        <% Playlist.all.each do |created_playlist| %>
+            <%= params[:uri] %>
+            <%= button_to created_playlist.playlistname, playlists_add_path(playlistid: created_playlist.id, uri: params[:uri]) %>
+        <% end %>
+    </ul>
+</div>
