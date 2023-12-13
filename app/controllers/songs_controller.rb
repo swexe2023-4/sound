@@ -38,8 +38,4 @@ class SongsController < ApplicationController
     
     @track_list = [track1, track2, track3, track4, track5]
   end
-<<<<<<< HEAD
 end
-=======
-end
->>>>>>> df86209db45c5142b08f99c1548790c349f51b24
