@@ -3,6 +3,7 @@ class PlaylistsController < ApplicationController
   require 'open-uri'
   RSpotify.authenticate(ENV['SPOTIFY_CLIENT_ID'], ENV['SPOTIFY_SECRET_ID'])
   
+
   def index
     @playlists = Playlist.all
     
