@@ -48,10 +48,10 @@
         <div class="search_by_songname">
             <%= form_with(url: songs_search_songs_path, method: :post) do |form| %>
                 <div class="search_songname_text">
-                    <%= form.text_area :songname, class: 'pln_form', rows: 1, id: "centered_text_area" %><br>
+                    <%= form.text_area :songname, class: 'src_form', rows: 1, id: "centered_text_area" %><br>
                 </div>
-                <div class="submit_btn">
-                    <%= form.submit "Search", class: 'sbt_button' %>
+                <div class="sbt_button_area1">
+                    <%= form.submit "Search", class: 'sbt_button1' %>
                 </div>
             <% end %>
         </div>

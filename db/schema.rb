@@ -41,14 +41,17 @@ ActiveRecord::Schema[7.0].define(version: 2023_11_25_055301) do
 
   create_table "playlist_songs", force: :cascade do |t|
     t.integer "playlist_id"
-    t.integer "song_id"
+    t.string "songuri"
+    t.string "songname"
+    t.string "artistname"
+    t.string "image"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
   create_table "playlists", force: :cascade do |t|
     t.string "playlistname"
-    t.string "user_id"
+    t.integer "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

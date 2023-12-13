@@ -1,10 +1,17 @@
 class PlaylistsController < ApplicationController
+  require 'rspotify'
+  require 'open-uri'
+  RSpotify.authenticate(ENV['SPOTIFY_CLIENT_ID'], ENV['SPOTIFY_SECRET_ID'])
+  
   def index
     @playlists = Playlist.all
     
     if params[:id].present?
       @selected_playlist = @playlists.find(params[:id])
     end
+    
+    @playlistsongs = PlaylistSong.where(playlist_id: @selected_playlist.id)
+    
     render "index"
   end
 
@@ -41,7 +48,9 @@ class PlaylistsController < ApplicationController
     # 正規表現を使ってIDを抽出
     @track_id = uri.match(/spotify:track:(\w+)/)&.captures&.first
     
-    @playlistsong = PlaylistSong.create(playlist_id: params[:playlistid], song_id: @track_id)
+    @playlistsong = PlaylistSong.create(
+      playlist_id: params[:playlistid], songuri: @track_id, songname: params[:songname], artistname: params[:artistname], image: params[:image]
+      )
     redirect_to top_index_path
   end
 end
