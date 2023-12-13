@@ -20,22 +20,26 @@
             
             <div id="playlist_songs_pi">
                 <div id="playlist_song_pi">
-                    <%= @playlistsongs.each do |playlistsong| %>
+                    <% @playlistsongs.each do |playlistsong| %>
                         <div class="playlistsong" data-id="<%= playlistsong.id %>">
                             <div class="select-playlistsong-wrapper">
                                 <%= button_to "", songs_index_path(uri: playlistsong.songuri), method: 'post', class: "select-song" %>
                             </div>
-                            <div id="playlistsong_thumbnail">
-                                <%= image_tag playlistsong.image %>
-                            </div>
-                            <div id="playlistsong_songname_area">
-                                <div id="playlistsong_songname">
-                                    <%= playlistsong.songname %>
+                            <div id="playlistsong_song_area">
+                                <div id="playlistsong_thumbnail">
+                                    <%= image_tag playlistsong.image %>
                                 </div>
-                            </div>
-                            <div id="playlistsong_artistname_area">
-                                <div id="playlistsong_songname">
-                                    <%= playlistsong.artistname %>
+                                <div id = "playlistsong_text_area">
+                                    <div id="playlistsong_songname_area">
+                                        <div id="playlistsong_songname">
+                                            <%= playlistsong.songname %>
+                                        </div>
+                                    </div>
+                                    <div id="playlistsong_artistname_area">
+                                        <div id="playlistsong_songname">
+                                            <%= playlistsong.artistname %>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
