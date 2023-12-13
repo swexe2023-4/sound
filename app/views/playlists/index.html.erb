@@ -20,10 +20,28 @@
             
             <div id="playlist_songs_pi">
                 <div id="playlist_song_pi">
-                    <%= button_to "曲名1", songs_index_path, method: 'post', class: "select-song" %>
+                    <%= @playlistsongs.each do |playlistsong| %>
+                        <div class="playlistsong" data-id="<%= playlistsong.id %>">
+                            <div class="select-playlistsong-wrapper">
+                                <%= button_to "", songs_index_path(uri: playlistsong.songuri), method: 'post', class: "select-song" %>
+                            </div>
+                            <div id="playlistsong_thumbnail">
+                                <%= image_tag playlistsong.image %>
+                            </div>
+                            <div id="playlistsong_songname_area">
+                                <div id="playlistsong_songname">
+                                    <%= playlistsong.songname %>
+                                </div>
+                            </div>
+                            <div id="playlistsong_artistname_area">
+                                <div id="playlistsong_songname">
+                                    <%= playlistsong.artistname %>
+                                </div>
+                            </div>
+                        </div>
+                    <% end %>
                 </div>
             </div>
         <% end %>
     </div>
 </div>
-

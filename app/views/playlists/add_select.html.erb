@@ -11,7 +11,9 @@
     <ul>
         <% Playlist.all.each do |created_playlist| %>
             <%= params[:uri] %>
-            <%= button_to created_playlist.playlistname, playlists_add_path(playlistid: created_playlist.id, uri: params[:uri]) %>
+            <%= params[:songname] %>
+            <%= params[:artistname] %>
+            <%= button_to created_playlist.playlistname, playlists_add_path(playlistid: created_playlist.id, uri: params[:uri], songname: params[:songname], artistname: params[:artistname], image: params[:image]) %>
         <% end %>
     </ul>
 </div>
