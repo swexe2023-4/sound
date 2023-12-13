@@ -1,10 +1,27 @@
-<h1>新規登録します</h1>
+<div id="whole_page">
+    <div id="logo">
+        <%= link_to top_index_path do %>
+            <%= image_tag 'logo2.png' %>
+        <% end %>
+    </div>
+    
+    
+    <div class="registration-form-container col-md-6 offset-md-3">
+        <h1 class="text-center mb-4">新規登録します</h1>
 
-
-<%= form_tag '/users/make', method: :post, data: { turbo: false } do %>
-    <%= label_tag :username, 'ユーザーID' %>
-    <%= text_field_tag :username %><br>
-    <%= label_tag :password, 'パスワード' %>
-    <%= password_field_tag :password %><br>
-    <%= submit_tag '登録'%><br>
-<% end %>
+    
+        <%= form_tag '/users/make', method: :post, data: { turbo: false } do %>
+            <div class="form-group">
+                <%= label_tag :username, 'ユーザーID' %>
+                <%= text_field_tag :username, class: 'form_control' %><br>
+            </div>
+            
+            <div class="form-group">
+                <%= label_tag :password, 'パスワード' %>
+                <%= password_field_tag :password, class: 'form_control' %><br>
+            </div>
+            
+            <%= submit_tag '登録', class: 'btn btn-success btn-block mt-3'%><br>
+        <% end %>
+    </dev>
+</div>
