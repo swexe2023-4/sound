@@ -5,15 +5,6 @@ class SongsController < ApplicationController
   
   def index
     @track_id = params[:uri]
-
-    # 正規表現を使ってIDを抽出
-    # @track_id = @track_id.match(/spotify:track:(\w+)/)&.captures&.first
-    
-    # @songs = Song.all
-    
-    # if params[:id].present?
-    #   @selected_song = @songs.find(params[:id])
-    # end
     
     render "index"
   end

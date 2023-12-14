@@ -5,22 +5,39 @@
         <% end %>
     </div>
     
-    <div class="songs_search">
-        <% @track_list.each do |track| %>
-            <div class="thumbnail_search">
-                <%= image_tag track.album.images.first["url"] %>
-            </div>
-            <div class="songname_search">
-                <%= track.name %>
-            </div>
-            <div class="artistname_search">
-                <%= track.artists[0].name %>
-            </div>
-            <div class="play_button_area">
-                <%= button_to "再生する", songs_index_path(uri: track.uri), class: "play_button" %>
-                <%= button_to "プレイリストに追加する", playlists_add_select_path(uri: track.uri, songname: track.name, artistname: track.artists[0].name, image: track.album.images.first["url"]), class: "play_button" %>
-            </div>
-        <% end %>
+    <div id="title3">
+        <p>検索結果: <%= params[:songname] %></p>
     </div>
-    <%= @tracks %>
+    
+    <div id="playlist_songs_pi">
+        <div id="playlist_song_pi">
+            <% @track_list.each do |track| %>
+                <div class="playlistsong" data-id="<%= track.uri %>">
+                    <div class="select-playlistsong-wrapper">
+                        <%= button_to "", songs_index_path(uri: track.uri.match(/spotify:track:(\w+)/)&.captures&.first), class: "select-song" %>
+                    </div>
+                    <div id="playlistsong_song_area">
+                        <div id="playlistsong_thumbnail">
+                            <%= image_tag track.album.images.first["url"] %>
+                        </div>
+                        <div id="playlistsong_text_area">
+                            <div id="playlistsong_songname_area">
+                                <div id="playlistsong_songname">
+                                    <%= track.name %>
+                                </div>
+                            </div>
+                            <div id="playlistsong_artistname_area">
+                                <div id="playlistsong_songname">
+                                    <%= track.artists[0].name %>
+                                </div>
+                            </div>
+                            <!--<div class="play_button_area">-->
+                            <!--    <%= button_to "プレイリストに追加する", playlists_add_select_path(uri: track.uri, songname: track.name, artistname: track.artists[0].name, image: track.album.images.first["url"]), class: "play_button" %>-->
+                            <!--</div>-->
+                        </div>
+                    </div>
+                </div>
+            <% end %>
+        </div>
+    </div>
 </div>

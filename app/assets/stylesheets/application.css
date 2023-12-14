@@ -44,6 +44,14 @@
     font-weight: bold;
 }
 
+#title3 {
+    font-family: 'Yu Gothic', 'メイリオ', sans-serif;
+    padding-top: 10px;
+    padding-left: 200px;
+    font-size: 40px;
+    font-weight: bold;
+}
+
 #playlists {
     padding-left: 50px;
     padding-bottom: 50px;
@@ -625,3 +633,6 @@
     box-sizing: border-box;
     font-size: 30px;
 }
+
+
+/*search_songs.html.erb*/
