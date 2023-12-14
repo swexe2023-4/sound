@@ -31,11 +31,13 @@
                                     <%= track.artists[0].name %>
                                 </div>
                             </div>
-                            <!--<div class="play_button_area">-->
-                            <!--    <%= button_to "プレイリストに追加する", playlists_add_select_path(uri: track.uri, songname: track.name, artistname: track.artists[0].name, image: track.album.images.first["url"]), class: "play_button" %>-->
-                            <!--</div>-->
                         </div>
                     </div>
+                </div>
+                <div class="play_button_area">
+                    <%= button_to playlists_add_select_path(uri: track.uri, songname: track.name, artistname: track.artists[0].name, image: track.album.images.first["url"]), class: "rtp_button2" do %>
+                        <%= image_tag 'plus-icon.svg'%>
+                    <% end %>
                 </div>
             <% end %>
         </div>

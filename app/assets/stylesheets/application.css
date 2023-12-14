@@ -47,7 +47,7 @@
 #title3 {
     font-family: 'Yu Gothic', 'メイリオ', sans-serif;
     padding-top: 10px;
-    padding-left: 200px;
+    padding-left: 150px;
     font-size: 40px;
     font-weight: bold;
 }
@@ -636,3 +636,26 @@
 
 
 /*search_songs.html.erb*/
+.play_button_area {
+    margin-top: 30px;
+    margin-left: 10px;
+    height: 70px;
+    width: 70px;
+}
+.play_button_area img {
+    height: 70px;
+    width: 70px;
+}
+.rtp_button2 {
+    background-color: rgba(0, 128, 128, 0.5);
+    color: white; /* ボタンの文字色 */
+    /* ボタンのパディング */
+    border: none; /* ボーダーをなくす */
+    border-radius: 50%; /* ボタンの角を丸くする */
+    cursor: pointer;
+    /*height: 10px;*/
+    /*width: 10px;*/
+}
+.rtp_button2:hover {
+    background-color: rgba(0, 128, 128, 1);
+}

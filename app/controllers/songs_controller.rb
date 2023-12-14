@@ -19,14 +19,11 @@ class SongsController < ApplicationController
   end
   
   def search_songs
-    @tracks = RSpotify::Track.search(params[:songname]).first(5)
+    @tracks = RSpotify::Track.search(params[:songname])
     
-    track1 = @tracks.first if @track.nil?
-    track2 = @tracks.second if @track.nil?
-    track3 = @tracks.third if @track.nil?
-    track4 = @tracks.fourth if @track.nil?
-    track5 = @tracks.fifth if @track.nil?
-    
-    @track_list = [track1, track2, track3, track4, track5]
+    @track_list = []
+    @tracks.each do |track|
+      @track_list.append(track)
+    end
   end
 end
