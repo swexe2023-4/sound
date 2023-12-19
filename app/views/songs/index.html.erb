@@ -12,10 +12,7 @@
       window.onSpotifyIframeApiReady = (IFrameAPI) => {
         const element = document.getElementById('embed-iframe');
         const options = {
-            uri: 'spotify:track:<%= @track_id %>',
-            // height: '100px'
-            // width: '60%'
-            // margin-left: '10px'
+            uri: 'spotify:track:<%= @track_id %>'
           };
         const callback = (EmbedController) => {};
         IFrameAPI.createController(element, options, callback);

@@ -42,6 +42,9 @@
                                     </div>
                                 </div>
                             </div>
+                            <div class="delete_playlistsong">
+                                <%= button_to "delete", songs_destroy_path(id: playlistsong.id), method: "post" %>
+                            </div>
                         </div>
                     <% end %>
                 </div>

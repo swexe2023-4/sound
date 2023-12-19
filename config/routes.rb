@@ -38,6 +38,7 @@ Rails.application.routes.draw do
   post 'users/login'
   post 'songs/index'
   post 'songs/search_songs'
+  post 'songs/destroy'
   
   resources :users
   
