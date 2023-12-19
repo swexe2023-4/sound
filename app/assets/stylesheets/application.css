@@ -666,11 +666,11 @@
     background-color: rgba(0, 128, 128, 0.5);
     color: white; /* ボタンの文字色 */
     /* ボタンのパディング */
-    border: none; /* ボーダーをなくす */
+    border: none;
     border-radius: 50%;
     cursor: pointer;
-    height: 50px;
-    width: 50px;
+    height: 60px;
+    width: 60px;
 }
 .rtp_button3:hover {
     background-color: rgba(0, 128, 128, 1);
