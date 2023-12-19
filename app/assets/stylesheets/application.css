@@ -663,10 +663,10 @@
 }
 
 .rtp_button3 {
-    background-color: rgba(0, 128, 128, 0.5);
+    background-color: transparent;
     color: white; /* ボタンの文字色 */
     /* ボタンのパディング */
-    border: none;
+    border: 5px solid white;
     border-radius: 50%;
     cursor: pointer;
     height: 60px;
