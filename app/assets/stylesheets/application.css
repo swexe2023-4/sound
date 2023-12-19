@@ -441,7 +441,7 @@
     display: flex;    /*flex boxの使用*/
     align-items: center; /* 縦方向の中央揃え */
     justify-content: center; /* 横方向の中央揃え */
-    height: 100%; /* 親要素の高さを100%にすることで、子要素を中央に配置 */
+    height: 80%; /* 親要素の高さを100%にすることで、子要素を中央に配置 */
 }
 
 #playlist_name_pi {
@@ -660,4 +660,27 @@
 }
 .rtp_button2:hover {
     background-color: rgba(0, 128, 128, 1);
+}
+
+.rtp_button3 {
+    background-color: rgba(0, 128, 128, 0.5);
+    color: white; /* ボタンの文字色 */
+    /* ボタンのパディング */
+    border: none; /* ボーダーをなくす */
+    border-radius: 50%;
+    cursor: pointer;
+    height: 50px;
+    width: 50px;
+}
+.rtp_button3:hover {
+    background-color: rgba(0, 128, 128, 1);
+}
+#destroy_playlist {
+    height: 60px;
+    width: 60px;
+    float: right;
+}
+#destroy_playlist img{
+    height: 40px;
+    width: 40px;
 }

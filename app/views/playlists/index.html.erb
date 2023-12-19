@@ -16,8 +16,10 @@
                         <p><%= @selected_playlist.playlistname %></p>
                     </div>
                 </div>
-                <div id="destroy playlist">
-                    <%= button_to "delete playlist", playlists_destroy_path(id: @selected_playlist.id), method: 'post' %>
+                <div id="destroy_playlist">
+                    <%= button_to playlists_destroy_path(id: @selected_playlist.id), class: "rtp_button3" do %>
+                        <%= image_tag 'remove.svg' %>
+                    <% end %>
                 </div>
             </div>
             
