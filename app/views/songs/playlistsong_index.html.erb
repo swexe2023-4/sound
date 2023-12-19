@@ -1,0 +1,25 @@
+<div id="logo">
+  <%= link_to top_index_path do %>
+    <%= image_tag 'logo2.png' %>
+  <% end %>
+</div>
+
+<div id="space">
+</div>
+
+<div id="embed-iframe">
+  <script>
+      window.onSpotifyIframeApiReady = (IFrameAPI) => {
+        const element = document.getElementById('embed-iframe');
+        const options = {
+            uri: 'spotify:track:<%= @track_id %>'
+          };
+        const callback = (EmbedController) => {};
+        IFrameAPI.createController(element, options, callback);
+      };
+  </script>
+</div>
+
+<div class="play_nextsong">
+    <%= button_to "次の曲", playlists_nextsong_path, class: "create-new-playlist" %>
+</div>

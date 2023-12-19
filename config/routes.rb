@@ -39,6 +39,7 @@ Rails.application.routes.draw do
   post 'songs/index'
   post 'songs/search_songs'
   post 'songs/destroy'
+  post 'songs/playlistsong_index'
   
   resources :users
   

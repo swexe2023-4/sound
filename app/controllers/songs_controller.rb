@@ -12,7 +12,7 @@ class SongsController < ApplicationController
   def playlistsong_index
     @track_id = params[:uri]
     
-    render "index"
+    render "playlistsong_index"
   end
   
   def create

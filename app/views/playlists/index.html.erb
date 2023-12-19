@@ -23,7 +23,7 @@
                     <% @playlistsongs.each do |playlistsong| %>
                         <div class="playlistsong" data-id="<%= playlistsong.id %>">
                             <div class="select-playlistsong-wrapper">
-                                <%= button_to "", songs_index_path(uri: playlistsong.songuri), method: 'post', class: "select-song" %>
+                                <%= button_to "", songs_playlistsong_index_path(uri: playlistsong.songuri), method: 'post', class: "select-song" %>
                             </div>
                             <div id="playlistsong_song_area">
                                 <div id="playlistsong_thumbnail">
