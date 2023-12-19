@@ -30,9 +30,16 @@ class PlaylistsController < ApplicationController
   end
 
   def destroy
+    Playlist.find(params[:id]).destroy
+    redirect_to top_index_path
   end
 
   def nextsong
+    @playlists = Playlist.all
+    
+    if params[:id].present?
+      @selected_playlist = @playlists.find(params[:id])
+    end
   end
   
   def playlist_params

@@ -16,6 +16,9 @@
                         <p><%= @selected_playlist.playlistname %></p>
                     </div>
                 </div>
+                <div id="destroy playlist">
+                    <%= button_to "delete playlist", playlists_destroy_path(id: @selected_playlist.id), method: 'post' %>
+                </div>
             </div>
             
             <div id="playlist_songs_pi">
@@ -23,7 +26,7 @@
                     <% @playlistsongs.each do |playlistsong| %>
                         <div class="playlistsong" data-id="<%= playlistsong.id %>">
                             <div class="select-playlistsong-wrapper">
-                                <%= button_to "", songs_playlistsong_index_path(uri: playlistsong.songuri), method: 'post', class: "select-song" %>
+                                <%= button_to "", songs_playlistsong_index_path(uri: playlistsong.songuri, id: playlistsong.id), method: 'post', class: "select-song" %>
                             </div>
                             <div id="playlistsong_song_area">
                                 <div id="playlistsong_thumbnail">

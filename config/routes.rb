@@ -41,6 +41,9 @@ Rails.application.routes.draw do
   post 'songs/destroy'
   post 'songs/playlistsong_index'
   
+  post 'playlists/nextsong'
+  post 'playlists/destroy'
+  
   resources :users
   
   resources :playlists
