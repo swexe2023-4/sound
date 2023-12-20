@@ -1,19 +1,29 @@
-<h1>addページ</h1>
-
-
-<h1>曲の追加を行います</h1>
-
-
-<h3>どのプレイリストに入れますか？</h3>
-
-<div class="playlist_list">
-    <h2>作成済みプレイリスト一覧</h2>
-    <ul>
-        <% Playlist.all.each do |created_playlist| %>
-            <%= params[:uri] %>
-            <%= params[:songname] %>
-            <%= params[:artistname] %>
-            <%= button_to created_playlist.playlistname, playlists_add_path(playlistid: created_playlist.id, uri: params[:uri], songname: params[:songname], artistname: params[:artistname], image: params[:image]) %>
+<div id="whole_page">
+    <div id="logo">
+        <%= link_to top_index_path do %>
+            <%= image_tag 'logo2.png' %>
         <% end %>
-    </ul>
-</div>
+    </div>
+    <div id="title2">
+        <p>プレイリストに追加</p>
+    </div>
+    
+    <div id="playlists">
+        <% Playlist.all.each do |created_playlist| %>
+            <div class="playlist" data-id="<%= created_playlist.id %>">
+                <div class="select-playlist-wrapper">
+                    <%= button_to "", playlists_add_path(playlistid: created_playlist.id, uri: params[:uri], songname: params[:songname], artistname: params[:artistname], image: params[:image]), class: "select-playlist" %>
+                </div>
+                <div id="playlist_thumbnail">
+                    <% if created_playlist.image.attached? %>
+                        <%= image_tag created_playlist.image %>
+                    <% end %>
+                </div>
+                <div id="playlist_name_area">
+                    <div id="playlist_name">
+                        <%= created_playlist.playlistname %>
+                    </div>
+                </div>
+            </div>
+        <% end %>
+    </div>
