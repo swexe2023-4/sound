@@ -1,15 +1,16 @@
-
 <div class="login">
 <div class="custom_body"></div>
     
     <div class="gred"></div>
-    
+
+
     <div id="whole_page">
         <div id="logo">
             <%= link_to top_index_path do %>
                 <%= image_tag 'logo2.png' %>
             <% end %>
         </div>
+
     
     
         <div class="registration-form-container col-md-6 offset-md-3">
@@ -29,3 +30,26 @@
             <% end %>
         </dev>
 </div>
+
+        
+        <div class="header">
+              <div>Sound<span>Sculpt</span></div>
+        </div>
+        
+        <div class="registration-form-container col-md-6 offset-md-3">
+            <h1 class="text-center mb-4">新規登録します</h1>
+        </div>
+        <div class="loginpage">
+            <%= form_tag '/users/make', method: :post, data: { turbo: false } do %>
+                
+            <%= label_tag :username, 'ユーザーID' %>
+            <%= text_field_tag :username %><br>
+                
+            <%= label_tag :password, 'パスワード' %>
+            <%= password_field_tag :password %><br>
+                
+            <%= submit_tag '登録', class: 'btn btn--red btn--radius btn--cubic'%><br>
+            <% end %>
+        </dev>
+    </div>
+
