@@ -601,5 +601,181 @@
     font-size: 30px;
 }
 
+/*.login*/
+/*{*/
+/*    background-color: red;*/
+/*}*/
+
+custom_body
+{
+    margin: 0;
+    padding: 0;
+    background: #fff;
+    
+    color: #fff;
+    font-family: Arial;
+    font-size: 12px;
+}
+
+.custom_body
+{
+    /*background-color: #a9a9a9;*/
+    position: absolute;
+    top: -20px;
+    left: -20px;
+    right: -40px;
+    bottom: -40px;
+    width: auto;
+    height: auto;
+    background-image: url(http://ginva.com/wp-content/uploads/2012/07/city-skyline-wallpapers-008.jpg);
+    background-size: cover;
+    -webkit-filter: blur(5px);
+    z-index: 0;
+}
+
+.gred{
+    position: absolute;
+    top: -20px;
+    left: -20px;
+    right: -40px;
+    bottom: -40px;
+    width: auto;
+    height: auto;
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,0,0,0)), color-stop(100%,rgba(0,0,0,0.65))); /* Chrome,Safari4+ */
+    z-index: 1;
+    opacity: 0.7;
+}
+
+.header{
+  position: absolute;
+  top: calc(50% - 35px);
+  left: calc(50% - 255px);
+  z-index: 2;
+}
+
+.header div
+{
+  float: left;
+  color: #fff;
+  font-family: 'Exo', sans-serif;
+  font-size: 35px;
+  font-weight: 200;
+}
+
+.header div span
+{
+  color: #5379fa !important;
+}
+
+.loginpage
+{
+  position: absolute;
+  top: calc(50% - 75px);
+  left: calc(50% - 50px);
+  height: 150px;
+  width: 350px;
+  padding: 10px;
+  z-index: 2;
+}
+
+.loginpage input[type=text]
+{
+  width: 250px;
+  height: 30px;
+  background: transparent;
+  border: 1px solid rgba(255,255,255,0.6);
+  border-radius: 2px;
+  color: #fff;
+  font-family: 'Exo', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  padding: 4px;
+}
+
+.loginpage input[type=password]
+{
+  width: 250px;
+  height: 30px;
+  background: transparent;
+  border: 1px solid rgba(255,255,255,0.6);
+  border-radius: 2px;
+  color: #fff;
+  font-family: 'Exo', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  padding: 4px;
+  margin-top: 10px;
+}
+
+.loginpage input[type=button]
+{
+  width: 260px;
+  height: 35px;
+  background: #fff;
+  border: 1px solid #fff;
+  cursor: pointer;
+  border-radius: 2px;
+  color: #a18d6c;
+  font-family: 'Exo', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  padding: 6px;
+  margin-top: 10px;
+}
+
+.loginpage input[type=button]:hover
+{
+  opacity: 0.8;
+}
+
+.loginpageinput[type=button]:active
+{
+  opacity: 0.6;
+}
+
+.loginpage input[type=text]:focus
+{
+  outline: none;
+  border: 1px solid rgba(255,255,255,0.9);
+}
+
+.loginpage input[type=password]:focus
+{
+  outline: none;
+  border: 1px solid rgba(255,255,255,0.9);
+}
+
+.loginpage input[type=button]:focus
+{
+  outline: none;
+}
+
+::-webkit-input-placeholder
+{
+   color: rgba(255,255,255,0.6);
+}
+
+::-moz-input-placeholder
+{
+   color: rgba(255,255,255,0.6);
+}
 
 
+.btn--red.btn--cubic {
+  border-bottom: 10px solid #9f000c;
+}
+
+.btn--red.btn--cubic:hover {
+  margin-top: 3px;
+  border-bottom: 2px solid #9f000c;
+}
+
+.btn--radius {
+  border-radius: 100vh;
+}
+
+.fa-position-right {
+  position: absolute;
+  top: calc(50% - .5em);
+  right: 3rem;
+}

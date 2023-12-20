@@ -1,4 +1,8 @@
 <div class="login">
+<div class="custom_body"></div>
+    
+    <div class="gred"></div>
+    
     <div id="whole_page">
             
         <div id="logo">
@@ -6,24 +10,26 @@
                 <%= image_tag 'logo2.png' %>
             <% end %>
         </div>
-            
+        
+        <div class="header">
+              <div>Sound<span>Sculpt</span></div>
+        </div>
+        <br>
+        
+        <div class="loginpage">
         <%= form_tag '/users/login', method: :post, data: { turbo: false } do %>
-            <div class~"form-group">
-                <%= label_tag :username, 'ユーザーの名前：' %>
-                <%= text_field_tag :username, class: 'form-control'%>
-                <!--<%= text_field_tag :username %><br>-->
-            </div>
-                
-            <div>
-                <%= label_tag :password, 'パスワード：' %>
-                <%= password_field_tag :password, class: 'form-control' %><br>
-            </div>
-                    
-                    
-            <%= submit_tag 'ログイン', class: 'btn btn-primary btn-block'%>
+        <%= label_tag :username, 'ユーザーの名前：' %>
+        
+        <!--<%= text_field_tag :username, nil, placeholder: 'ユーザーの名前' %>-->
+        
+        <%= text_field_tag :username %><br>
+        <%= label_tag :password, 'パスワード：' %>
+        <%= password_field_tag :password %><br>
+        <!--<%= submit_tag 'ログイン' %>-->
+        <%= submit_tag 'ログイン', class: 'btn btn--red btn--radius btn--cubic' %>
         <% end %>
-            
-            
-        <%= link_to "新規登録はこちら", users_new_path, class: 'mt-3 d-block text-center' %>
+    
+        <%= link_to "新規登録はこちら", users_new_path%>
+        </div>
     </div>
-</div>
+</div> 
