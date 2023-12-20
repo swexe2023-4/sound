@@ -857,8 +857,6 @@ custom_body
   top: calc(50% - .5em);
   right: 3rem;
 }
-<<<<<<< HEAD
-=======
 #test{
 }
 
@@ -886,4 +884,7 @@ custom_body
     /*margin-bottom: 80px;*/
     /* マージンを調整する場合は都度変更 */
 }
->>>>>>> logincss
+
+.delete_playlistsong{
+    float: right;
+}
