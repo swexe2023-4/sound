@@ -857,7 +857,10 @@ custom_body
   top: calc(50% - .5em);
   right: 3rem;
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> playlist
 #test{
 }
 
@@ -884,5 +887,9 @@ custom_body
     margin: 5em;
     /*margin-bottom: 80px;*/
     /* マージンを調整する場合は都度変更 */
+}
+
+.delete_playlistsong{
+    float: right;
 }
 
