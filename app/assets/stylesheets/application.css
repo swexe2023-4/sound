@@ -44,6 +44,14 @@
     font-weight: bold;
 }
 
+#title3 {
+    font-family: 'Yu Gothic', 'メイリオ', sans-serif;
+    padding-top: 10px;
+    padding-left: 150px;
+    font-size: 40px;
+    font-weight: bold;
+}
+
 #playlists {
     padding-left: 50px;
     padding-bottom: 50px;
@@ -433,7 +441,11 @@
     display: flex;    /*flex boxの使用*/
     align-items: center; /* 縦方向の中央揃え */
     justify-content: center; /* 横方向の中央揃え */
-    height: 100%; /* 親要素の高さを100%にすることで、子要素を中央に配置 */
+<<<<<<<<< saved version
+
+=========
+    height: 80%; /* 親要素の高さを100%にすることで、子要素を中央に配置 */
+>>>>>>>>> local version
 }
 
 #playlist_name_pi {
