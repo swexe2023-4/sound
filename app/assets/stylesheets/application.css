@@ -441,7 +441,15 @@
     display: flex;    /*flex boxの使用*/
     align-items: center; /* 縦方向の中央揃え */
     justify-content: center; /* 横方向の中央揃え */
+<<<<<<< HEAD
     height: 80%; /* 親要素の高さを100%にすることで、子要素を中央に配置 */
+=======
+<<<<<<<<< saved version
+
+=========
+    height: 80%; /* 親要素の高さを100%にすることで、子要素を中央に配置 */
+>>>>>>>>> local version
+>>>>>>> logincss
 }
 
 #playlist_name_pi {
