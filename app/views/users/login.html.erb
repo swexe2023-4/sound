@@ -18,12 +18,12 @@
         
         <div class="loginpage">
         <%= form_tag '/users/login', method: :post, data: { turbo: false } do %>
-        <%= label_tag :username, 'ユーザーの名前：' %>
+        <%= label_tag :username, 'ユーザー名' %>
         
         <!--<%= text_field_tag :username, nil, placeholder: 'ユーザーの名前' %>-->
         
         <%= text_field_tag :username %><br>
-        <%= label_tag :password, 'パスワード：' %>
+        <%= label_tag :password, 'パスワード' %>
         <%= password_field_tag :password %><br>
         <!--<%= submit_tag 'ログイン' %>-->
         <%= submit_tag 'ログイン', class: 'btn btn--red btn--radius btn--cubic' %>

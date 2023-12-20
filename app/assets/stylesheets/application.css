@@ -857,3 +857,33 @@ custom_body
   top: calc(50% - .5em);
   right: 3rem;
 }
+<<<<<<< HEAD
+=======
+#test{
+}
+
+
+/*.text-center mb-4*/
+/*{*/
+/*    font-style: italic; */
+/*    text-align: center;*/
+/*    text-color: red;*/
+/*}*/
+
+/*.registration-form-container col-md-6 offset-md-3*/
+/*{*/
+/*    text-align: center;*/
+/*    text-color: red;*/
+/*}*/
+
+.registration-form-container {
+    text-align: center;
+}
+
+.registration-form-container h1 {
+    color: #FF00FF;
+    margin: 5em;
+    /*margin-bottom: 80px;*/
+    /* マージンを調整する場合は都度変更 */
+}
+>>>>>>> logincss
