@@ -19,7 +19,7 @@
         <div class="loginpage">
             <%= form_tag '/users/make', method: :post, data: { turbo: false } do %>
                 
-            <%= label_tag :username, 'ユーザーID' %>
+            <%= label_tag :username, 'ユーザー名' %>
             <%= text_field_tag :username %><br>
                 
             <%= label_tag :password, 'パスワード' %>
